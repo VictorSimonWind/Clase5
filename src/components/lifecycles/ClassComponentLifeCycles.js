@@ -1,4 +1,9 @@
 import React, { Component } from 'react'
+/*LOS LIFE CYLES se refieren a lo que sucede con un componente 
+durante su creacion,actulizacion y destrucion*/
+
+/*React nos da metodos de controlar lo que se sucede durante
+durante el cyclo de vida del componente*/
 
 export default class ClassComponenteLifeCycles extends Component {
     constructor(props){
@@ -6,7 +11,6 @@ export default class ClassComponenteLifeCycles extends Component {
         this.state = {
             date: new Date(),
             color: Math.floor(Math.random()*16777215).toString(16)
-
         }
     }
     /*componentDidMount 
@@ -18,7 +22,7 @@ export default class ClassComponenteLifeCycles extends Component {
         despues de que el render del componente esta finalizado*/ 
 
         this.timer = setInterval(()=> this.tick(),1000);
-        /*con set interval le pedimos que ejecute el method tick cada segundo, cada vez que el
+        /*con set interval le pedimos que ejecute el method tick cada segundo(linea 38), cada vez que el
         componente ya este renderizado*/
         
         document.addEventListener("click", (e)=>{
@@ -29,8 +33,16 @@ export default class ClassComponenteLifeCycles extends Component {
         });
         
     }
-    componentDidUpdate(){
-        this.alamart = alert(`cambio el color`);
+    componentDidUpdate(prevProps,PrevState){ 
+        /*los evento en componentDidUpdate se activan
+        siempre que ocurre algun cambio en el render*/ 
+        /**en que caso de que esten ocurriendo varios cambios a la vez en el render
+         * PrevProps y PrevState nos ayudaran a filtrar que cambios deben disparar eventos
+         * y que no
+         */
+        if(PrevState.color !== this.state.color) {
+            alert(`cambio el color`);
+        }
     }
 
     /*el metodo Tick que llamamos en el componentDidMount cambia
@@ -45,7 +57,7 @@ export default class ClassComponenteLifeCycles extends Component {
     render() {
         return (
             <div>
-                <h1 style={{backgroundColor:'#'+ this.state.color,transition:'500ms ease-in-out'}}>
+                <h1 style={{backgroundColor:'#'+ this.state.color}}>
                     {this.state.date.toLocaleTimeString()}
                 </h1>
             </div>

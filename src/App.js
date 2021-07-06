@@ -3,6 +3,7 @@ import PropsExample from './components/props/PropsExample';
 import FunctionalComponentStateExample from './components/state/FunctionalComponentStateExample';
 import ClassComponenteStateExample from './components/state/ClassComponenteStateExample';
 import FunctionComponentLifeCycles from './components/lifecycles/FunctionComponentLifeCycles';
+import ClassComponenteLifeCycles from './components/lifecycles/ClassComponentLifeCycles';
 
 
 function App() {
@@ -11,8 +12,8 @@ function App() {
       {/*<PropsExample/>*/}
       {/*<FunctionalComponentStateExample/>*/}
       {/*<ClassComponenteStateExample/>*/}
-      {/*<FunctionalComponentStateExample*/}
-      <FunctionComponentLifeCycles/>
+      {/*<FunctionComponentLifeCycles/>*/}
+      {/* <ClassComponenteLifeCycles/>*/}
     </div>
 
   );
