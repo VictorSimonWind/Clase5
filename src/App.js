@@ -4,6 +4,7 @@ import FunctionalComponentStateExample from './components/state/FunctionalCompon
 import ClassComponenteStateExample from './components/state/ClassComponenteStateExample';
 import FunctionComponentLifeCycles from './components/lifecycles/FunctionComponentLifeCycles';
 import ClassComponenteLifeCycles from './components/lifecycles/ClassComponentLifeCycles';
+import ClickTracker from './components/Practica/ClickTracker';
 
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
       {/*<FunctionalComponentStateExample/>*/}
       {/*<ClassComponenteStateExample/>*/}
       {/*<FunctionComponentLifeCycles/>*/}
-      {/* <ClassComponenteLifeCycles/>*/}
+      {/*<ClassComponenteLifeCycles/>*/}
+      <ClickTracker/>
     </div>
 
   );

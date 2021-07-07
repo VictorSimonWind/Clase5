@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 durante su creacion,actulizacion y destrucion*/
 
 /*React nos da metodos de controlar lo que se sucede durante
-durante el cyclo de vida del componente*/
+ el cyclo de vida del componente*/
 
 export default class ClassComponenteLifeCycles extends Component {
     constructor(props){
@@ -12,16 +12,19 @@ export default class ClassComponenteLifeCycles extends Component {
             date: new Date(),
             color: Math.floor(Math.random()*16777215).toString(16)
         }
+        
     }
     /*componentDidMount 
      ES UN CYCLE EVENTS METHOD Y NOS PERMITE CONTROLAR LO QUE SUCEDE EN 
     JUSTO DESPUES DEL RENDER DE NUESTRO COMPONENTE
     */
-    componentDidMount() {
+    
+     componentDidMount() {
         /*los evento en componentDidMount se activan
         despues de que el render del componente esta finalizado*/ 
 
         this.timer = setInterval(()=> this.tick(),1000);
+        
         /*con set interval le pedimos que ejecute el method tick cada segundo(linea 38), cada vez que el
         componente ya este renderizado*/
         

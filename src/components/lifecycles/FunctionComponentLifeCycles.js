@@ -5,7 +5,7 @@ durante su creacion,actulizacion y destrucion*/
 durante el cyclo de vida del componente*/
 
 import React from 'react'
-/* PARA PODER CONTROLAR LOS LIFE CYCLES ES UN FUNCTION COMPONENT
+/* PARA PODER CONTROLAR LOS LIFE CYCLES EN UN FUNCTION COMPONENT
 DEBEMOS IMPORTAR EL useEffect HOOK*/
 import { useState,useEffect } from 'react'
 
@@ -28,15 +28,16 @@ export default function FunctionComponentLifeCycles() {
         setInterval(()=>{
            tick();
         },1000)
-       })
+    })
 
-       useEffect(()=>{
+    useEffect(()=>{
               alert(`cambio de color`);
           /**agregandole un valor de nuestro state al final del use Effect
            * podemos activar nuestro evento, cada vez 
            * que se actualice el state
            */
-       },[bgColor])
+    },[bgColor,date])
+
 
     const tick = () =>{
         setDate(new Date);
