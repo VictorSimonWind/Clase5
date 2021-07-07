@@ -1,5 +1,4 @@
 *{
-  margin:10px;
   border: solid red 1px
 }
 
@@ -42,3 +41,23 @@
     transform: rotate(360deg);
   }
 }
+
+/*Estilos AfterClass*/
+
+.product{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 150px;
+  height: 350px;
+}
+
+img {
+  width: 140px;
+}
+input{
+  width: 60px;
+}
+
+

@@ -5,6 +5,9 @@ import ClassComponenteStateExample from './components/state/ClassComponenteState
 import FunctionComponentLifeCycles from './components/lifecycles/FunctionComponentLifeCycles';
 import ClassComponenteLifeCycles from './components/lifecycles/ClassComponentLifeCycles';
 import ClickTracker from './components/Practica/ClickTracker';
+import ProductContainer from './components/AfterClass/ProductContainer';
+import Map from './components/AfterClass/Map';
+
 
 
 function App() {
@@ -15,7 +18,10 @@ function App() {
       {/*<ClassComponenteStateExample/>*/}
       {/*<FunctionComponentLifeCycles/>*/}
       {/*<ClassComponenteLifeCycles/>*/}
-      <ClickTracker/>
+      {/** <ClickTracker/> */}
+      {/*<ProductContainer/>*/}
+      <Map/>
+      
     </div>
 
   );
